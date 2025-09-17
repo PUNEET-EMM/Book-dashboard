@@ -16,12 +16,7 @@ export default function Navbar() {
           </div>
         </Link>
         
-        <div className="flex items-center gap-4">
-          <div className="text-right hidden md:block">
-            <p className="text-sm font-medium text-gray-900">Dashboard</p>
-            <p className="text-xs text-gray-500">Book Management</p>
-          </div>
-        </div>
+      
       </div>
     </header>
   );
