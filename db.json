@@ -65,6 +65,22 @@
       "status": "Issued"
     },
     {
+      "id": "9",
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "genre": "Romance",
+      "publishedYear": 1847,
+      "status": "Available"
+    },
+    {
+      "id": "10",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "publishedYear": 1954,
+      "status": "Issued"
+    },
+    {
       "id": "11",
       "title": "Brave New World",
       "author": "Aldous Huxley",
@@ -102,6 +118,126 @@
       "author": "John Steinbeck",
       "genre": "Classic",
       "publishedYear": 1937,
+      "status": "Available"
+    },
+    {
+      "id": "16",
+      "title": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "genre": "Drama",
+      "publishedYear": 2003,
+      "status": "Available"
+    },
+    {
+      "id": "17",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy",
+      "publishedYear": 1997,
+      "status": "Issued"
+    },
+    {
+      "id": "18",
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "genre": "Mystery",
+      "publishedYear": 2003,
+      "status": "Available"
+    },
+    {
+      "id": "19",
+      "title": "Gone with the Wind",
+      "author": "Margaret Mitchell",
+      "genre": "Romance",
+      "publishedYear": 1936,
+      "status": "Available"
+    },
+    {
+      "id": "20",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "genre": "Philosophy",
+      "publishedYear": 1988,
+      "status": "Issued"
+    },
+    {
+      "id": "21",
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "genre": "Adventure",
+      "publishedYear": 1851,
+      "status": "Available"
+    },
+    {
+      "id": "22",
+      "title": "The Odyssey",
+      "author": "Homer",
+      "genre": "Classic",
+      "publishedYear": -800,
+      "status": "Available"
+    },
+    {
+      "id": "23",
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "genre": "Classic",
+      "publishedYear": 1866,
+      "status": "Issued"
+    },
+    {
+      "id": "24",
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "genre": "Classic",
+      "publishedYear": 1890,
+      "status": "Available"
+    },
+    {
+      "id": "25",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": "Science Fiction",
+      "publishedYear": 1965,
+      "status": "Available"
+    },
+    {
+      "id": "26",
+      "title": "The Handmaid's Tale",
+      "author": "Margaret Atwood",
+      "genre": "Dystopian",
+      "publishedYear": 1985,
+      "status": "Issued"
+    },
+    {
+      "id": "27",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel García Márquez",
+      "genre": "Magical Realism",
+      "publishedYear": 1967,
+      "status": "Available"
+    },
+    {
+      "id": "28",
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "genre": "Dystopian",
+      "publishedYear": 2008,
+      "status": "Available"
+    },
+    {
+      "id": "29",
+      "title": "Sherlock Holmes: The Complete Collection",
+      "author": "Arthur Conan Doyle",
+      "genre": "Mystery",
+      "publishedYear": 1887,
+      "status": "Issued"
+    },
+    {
+      "id": "30",
+      "title": "Life of Pi",
+      "author": "Yann Martel",
+      "genre": "Adventure",
+      "publishedYear": 2001,
       "status": "Available"
     }
   ]

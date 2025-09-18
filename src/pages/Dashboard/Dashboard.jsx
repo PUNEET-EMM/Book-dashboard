@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Plus, Search, Filter, BookOpen } from 'lucide-react';
 import { useBooks } from '../../hooks/useBooks';
 import BookModal from '../../components/Modals/BookModal';
@@ -20,6 +20,11 @@ export default function Dashboard() {
   const [toast, setToast] = useState(null);
 
   const booksPerPage = 10;
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, genreFilter, statusFilter]);
+
   const filteredBooks = useMemo(() => {
     if (!booksQuery.data) return [];
     return booksQuery.data.filter(book => {
@@ -140,6 +145,7 @@ export default function Dashboard() {
         isOpen={isModalOpen}
         onSave={handleSave}
         onClose={() => { setIsModalOpen(false); setEditingBook(null); }}
+        isLoading={editingBook ? editBook.isPending : createBook.isPending}
       />
       
       <DeleteModal
@@ -147,6 +153,7 @@ export default function Dashboard() {
         bookTitle={deleteModal.book?.title}
         onConfirm={confirmDelete}
         onClose={() => setDeleteModal({ isOpen: false, book: null })}
+        isLoading={removeBook.isPending}
       />
       
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
