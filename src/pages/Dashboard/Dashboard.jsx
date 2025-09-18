@@ -6,6 +6,7 @@ import BookTable from './BookTable';
 import DeleteModal from '../../components/Modals/DeleteModal';
 import Toast from '../../components/Toast/Toast';
 import { GENRES, STATUSES } from "../../utils/constants";
+import Layout from "../Layout/Layout"
 
 export default function Dashboard() {
   const { booksQuery, createBook, editBook, removeBook } = useBooks();
@@ -65,6 +66,7 @@ export default function Dashboard() {
   };
 
   return (
+    <Layout>
     <div className="min-h-screen bg-gray-50 p-2 sm:p-4 lg:p-6">
       <div className="max-w-7xl mx-auto">
         {/* header */}
@@ -149,5 +151,6 @@ export default function Dashboard() {
       
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </div>
+    </Layout>
   );
 }

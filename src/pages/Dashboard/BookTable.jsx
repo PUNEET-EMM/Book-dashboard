@@ -16,7 +16,7 @@ const BookTable = ({
   const renderPageButtons = () => {
     const buttons = [];
     const maxVisiblePages = 5;
-    
+
     if (totalPages <= maxVisiblePages) {
       // Show all pages if total is small
       for (let page = 1; page <= totalPages; page++) {
@@ -24,11 +24,10 @@ const BookTable = ({
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`px-2 sm:px-3 py-1.5 sm:py-2 border rounded-md text-xs sm:text-sm min-w-[32px] sm:min-w-[36px] ${
-              page === currentPage
-                ? 'bg-blue-500 text-white border-blue-500'
-                : 'border-gray-300 hover:bg-gray-50'
-            }`}
+            className={`px-2 sm:px-3 py-1.5 sm:py-2 border rounded-md text-xs sm:text-sm min-w-[32px] sm:min-w-[36px] ${page === currentPage
+              ? 'bg-blue-500 text-white border-blue-500'
+              : 'border-gray-300 hover:bg-gray-50'
+              }`}
           >
             {page}
           </button>
@@ -61,11 +60,10 @@ const BookTable = ({
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`px-2 sm:px-3 py-1.5 sm:py-2 border rounded-md text-xs sm:text-sm min-w-[32px] sm:min-w-[36px] ${
-              page === currentPage
-                ? 'bg-blue-500 text-white border-blue-500'
-                : 'border-gray-300 hover:bg-gray-50'
-            }`}
+            className={`px-2 sm:px-3 py-1.5 sm:py-2 border rounded-md text-xs sm:text-sm min-w-[32px] sm:min-w-[36px] ${page === currentPage
+              ? 'bg-blue-500 text-white border-blue-500'
+              : 'border-gray-300 hover:bg-gray-50'
+              }`}
           >
             {page}
           </button>
@@ -96,17 +94,14 @@ const BookTable = ({
 
   return (
     <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-      {/* Header */}
+
+
       <div className="p-3 sm:p-4 border-b border-gray-200">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <h2 className="text-base sm:text-lg font-semibold text-gray-800">
             Books ({filteredLength} total)
           </h2>
-          {filteredLength > 0 && (
-            <p className="text-xs sm:text-sm text-gray-500">
-              Showing {startIndex}-{endIndex} of {filteredLength}
-            </p>
-          )}
+
         </div>
       </div>
 
@@ -149,31 +144,36 @@ const BookTable = ({
                       </button>
                     </div>
                   </div>
-                  
-                  <div className="grid grid-cols-2 gap-3 text-xs">
+
+                  <div className="grid grid-row-3  text-xs">
                     <div className="flex items-center gap-1.5">
-                      <Tag size={12} className="text-gray-400 flex-shrink-0" />
-                      <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full font-medium truncate">
+                      <span className=' font-semibold'>Genre:</span>
+                      <span className=" py-1  text-blue-800  font-medium truncate">
                         {book.genre}
                       </span>
                     </div>
+
                     <div className="flex items-center gap-1.5">
-                      <Calendar size={12} className="text-gray-400 flex-shrink-0" />
+                      <span className=' font-semibold'>Status:</span>
+                      <span
+                        className={` py-1 text-xs font-medium  ${book.status === 'Available'
+                          ? ' text-green-800'
+                          : ' text-yellow-800'
+                          }`}
+                      >
+                        {book.status}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <span className=' font-semibold'>Year:</span>
+
                       <span className="text-gray-600">{book.publishedYear}</span>
                     </div>
                   </div>
-                  
-                  <div className="mt-3 flex justify-between items-center">
-                    <span
-                      className={`px-2 py-1 text-xs font-medium rounded-full ${
-                        book.status === 'Available'
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-yellow-100 text-yellow-800'
-                      }`}
-                    >
-                      {book.status}
-                    </span>
-                  </div>
+
+
+
+
                 </div>
               ))}
             </div>
@@ -223,11 +223,10 @@ const BookTable = ({
                     </td>
                     <td className="px-6 py-4">
                       <span
-                        className={`px-2 py-1 text-xs font-medium rounded-full ${
-                          book.status === 'Available'
-                            ? 'bg-green-100 text-green-800'
-                            : 'bg-yellow-100 text-yellow-800'
-                        }`}
+                        className={`px-2 py-1 text-xs font-medium rounded-full ${book.status === 'Available'
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-yellow-100 text-yellow-800'
+                          }`}
                       >
                         {book.status}
                       </span>
@@ -258,13 +257,10 @@ const BookTable = ({
         </>
       )}
 
-      {/* Pagination */}
       {totalPages > 1 && (
         <div className="px-3 sm:px-6 py-3 border-t border-gray-200">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div className="text-xs sm:text-sm text-gray-600 order-2 sm:order-1">
-              Page {currentPage} of {totalPages}
-            </div>
+          <div className="flex flex-col sm:flex-row items-center justify-end gap-3">
+
             <div className="flex items-center gap-1 sm:gap-2 order-1 sm:order-2">
               <button
                 onClick={() => onPageChange(Math.max(1, currentPage - 1))}
